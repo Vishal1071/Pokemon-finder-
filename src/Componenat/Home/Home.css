@@ -1,0 +1,87 @@
+/* Only affects .counter component */
+.counter {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.counter h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.counter p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0 20px;
+}
+
+/* Input */
+.counter-input {
+  margin-bottom: 20px;
+}
+
+.counter-input span {
+  font-size: 1rem;
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.counter-input input {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 80px;
+  text-align: center;
+}
+
+/* Buttons */
+.counter-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.counter-btns button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.counter-btns button:nth-child(1) {
+  background: #4caf50;
+  color: white;
+}
+
+.counter-btns button:nth-child(1):hover {
+  background: #45a049;
+}
+
+.counter-btns button:nth-child(2) {
+  background: #ff9800;
+  color: white;
+}
+
+.counter-btns button:nth-child(2):hover {
+  background: #e68900;
+}
+
+.counter-btns button:nth-child(3) {
+  background: #f44336;
+  color: white;
+}
+
+.counter-btns button:nth-child(3):hover {
+  background: #d32f2f;
+}

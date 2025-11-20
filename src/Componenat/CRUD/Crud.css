@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0600392d;
+  font-family: Arial, sans-serif;
+}
+
+.section-post {
+  padding: 20px;
+}
+
+.section-post ol {
+  counter-reset: card-counter;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  list-style: none;
+}
+
+.section-post li {
+  counter-increment: card-counter;
+  position: relative;
+  background: #e1e1e1;
+  border-radius: 10px;
+  padding: 15px 15px 15px 40px; /* extra left padding for numbers */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-post li::before {
+  content: counter(card-counter) ".";
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #333;
+}
+
+.section-post li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-post p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.Edit-btn,
+.Delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.Edit-btn {
+  background: #4caf50;
+  color: #fff;
+}
+
+.Delete-btn {
+  background: #f44336;
+  color: #fff;
+}
+.Delete-btn:hover{
+  background: #ab0b00;
+  color: #fff;
+}
+
+
+
+form {
+  display: flex;
+  margin: 10px auto;
+  gap: 10px;
+  background: #9d9d9d; /* dark background */
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Title input */
+.tital-in {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  width: 150px;
+}
+
+/* Body input */
+.body-in {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  width: 200px;
+}
+
+/* Add button */
+.Add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.Add-btn:hover {
+  background-color: #218838;
+}

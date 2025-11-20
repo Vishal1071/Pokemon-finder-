@@ -1,0 +1,75 @@
+/* Wrapper to prevent global CSS conflicts */
+.accordion-container {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.accordion-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Accordion item */
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header (question + button) */
+.accordion-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  cursor: pointer;
+}
+
+.accordion-question {
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Toggle button */
+.accordion-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #444;
+  transition: background 0.3s ease;
+}
+
+.accordion-btn:hover {
+  background: #e2e2e2;
+}
+
+/* Active state */
+.accordion-btn.active-btn {
+  background: #007bff;
+  color: white;
+}
+
+/* Answer content */
+.accordion-answer {
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}

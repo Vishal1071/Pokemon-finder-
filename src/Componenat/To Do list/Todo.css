@@ -1,0 +1,269 @@
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(120deg, #001214, #001f29);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+  font-size: 2.8rem;
+}
+
+.header h1 {
+  font-size: 4rem;
+  color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.date-time {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #bdc3c7;
+}
+
+/* === Form === */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  background-color: #f2f3f4;
+  color: #2c3e50;
+  transition: all 0.2s ease-in-out;
+}
+
+form input:focus {
+  background-color: #eaf6ff;
+}
+
+form input::placeholder {
+  color: #7f8c8d;
+}
+
+form button {
+  padding: 12px 20px;
+  font-size: 1.6rem;
+  border: none;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  min-width: 110px;
+  background-color: #5dade2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+/* === Task List === */
+.myUnOrdList {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 900px;
+  width: 100%;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 12px 0 12px -30px;
+  padding: 0.5rem 1.5rem;
+  background-color: #f2f3f4;
+  color: #2c3e50;
+  font-size: 1.6rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  overflow-wrap: anywhere;
+}
+
+.todo-item:hover {
+  background-color: #eaf6ff;
+  transform: translateY(-2px);
+}
+
+.todo-item span {
+  max-width: 22rem;
+  margin-right: 18rem;
+  word-break: break-word;
+}
+
+/* === Buttons inside list === */
+.check-btn,
+.delete-btn {
+  width: 2.7rem;
+  height: 2.7rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.check-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.check-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.15);
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.15);
+}
+
+/* === Completed vs Not Completed === */
+.checkList {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.notCheckList {
+  text-decoration: none;
+}
+
+/* === Clear All Button === */
+.clear-btn {
+  background-color: #e74c3c;
+  font-size: 1.4rem;
+  margin-left: 12rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.clear-btn:hover {
+  background-color: #8d1407;
+  transform: scale(1.05);
+}
+
+
+
+/* --- Responsive Adjustments for Mobile Screens (Max-width 768px) --- */
+@media (max-width: 768px) {
+
+    /* === Main Container Adjustments === */
+    .todo-container {
+        padding: 0 15px; /* Add horizontal padding to prevent content from touching edges */
+    }
+
+    /* === Header Adjustments === */
+    .header {
+        min-height: 15vh;
+    }
+    .header h1 {
+        font-size: 2.5rem; /* Reduce main title size */
+    }
+    .date-time {
+        font-size: 1.2rem; /* Reduce date/time text size */
+    }
+
+    /* === Form Adjustments === */
+    form {
+        flex-direction: row; /* Keep input and button side-by-side */
+        padding: 0 15px;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensures padding/border doesn't increase total width */
+    }
+    
+    form input, 
+    form button {
+        font-size: 1.2rem; /* Reduce input and button text size */
+        padding: 10px;
+    }
+
+    /* === Task List Adjustments === */
+    .myUnOrdList {
+        padding: 0 15px; /* Add padding to list container */
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .todo-list {
+        width: 100%;
+    }
+
+    /* Adjust the grid for list items */
+    .todo-item {
+        /* Change grid structure: content takes max space, buttons are fixed */
+        grid-template-columns: 1fr auto auto;
+        gap: 0.8rem;
+        margin: 8px 0; /* Adjust margin around items */
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        /* Remove the negative margin from the old structure */
+        margin-left: 0; 
+    }
+
+    /* Task Text (Span) Adjustments */
+    .todo-item span {
+        max-width: none; /* Allow text to use all available space */
+        margin-right: 0; /* Remove large margin */
+    }
+
+    /* Buttons inside list */
+    .check-btn,
+    .delete-btn {
+        width: 2rem; /* Smaller button size */
+        height: 2rem;
+        font-size: 1.2rem;
+    }
+
+    /* === Clear All Button Adjustments === */
+    .clear-btn {
+        font-size: 1.2rem;
+        margin-left: 0; /* Remove large fixed margin */
+        margin-top: 15px;
+        padding: 0.6rem 1.2rem;
+        /* Ensure the button is not hidden by overflow */
+        margin-bottom: 20px; 
+    }
+}

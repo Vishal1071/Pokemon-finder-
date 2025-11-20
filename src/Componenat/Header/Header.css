@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.hea-der {
+  display: flex;
+  justify-content: space-between; /* space between title and menu */
+  align-items: center;
+  padding: 15px 30px;
+  background: #282c34; /* dark header */
+  color: white;
+}
+
+.hea-der h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.mainu {
+  display: flex;
+  gap: 20px; /* spacing between links */
+}
+
+.mainu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+
+
+
+
+
+
+/* --- Responsive Adjustments for Mobile Screens (Max-width 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Change the main container to stack the title and menu vertically */
+    .hea-der {
+        flex-direction: column; /* Stack the items */
+        padding: 15px 15px; /* Reduce padding on small screens */
+        text-align: center;
+    }
+
+    /* 2. Add some spacing between the title and the menu */
+    .hea-der h1 {
+        margin-bottom: 10px;
+    }
+
+    /* 3. Change the menu container to allow links to wrap or display nicely */
+    .mainu {
+        /* Allow links to wrap to the next line if needed */
+        flex-wrap: wrap; 
+        
+        /* Adjust spacing */
+        gap: 10px; /* Smaller gap between links */
+        
+        /* Center the wrapped links */
+        justify-content: center;
+    }
+    
+    /* 4. Adjust font sizes for better fit on small screens */
+    .hea-der h1 {
+        font-size: 20px;
+    }
+    
+    .mainu a {
+        font-size: 14px;
+        padding: 5px 8px; /* Add small padding to make links easier to tap */
+    }
+}
