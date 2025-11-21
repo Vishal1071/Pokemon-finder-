@@ -10,7 +10,7 @@ function Pokemon() {
   const [error, setError] = useState();
   const [search, setSearch] = useState("");
 
-  const API = import.meta.env.VITE_API_KEY;
+  const API = "https://pokeapi.co/api/v2/pokemon?limit=100";
 
   const fechPokemon = async () => {
     try {
